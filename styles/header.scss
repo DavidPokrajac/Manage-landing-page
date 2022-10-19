@@ -1,0 +1,35 @@
+@use "globals";
+
+header {
+    display: flex;
+    padding: 2rem 3rem;
+
+    nav {
+        flex-grow: 1;
+        ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+
+            li {
+                display: inline-block;
+                color: globals.$darkBlue;
+                margin: 0 1rem;
+                font-size: 14px;
+            }
+        }
+    }
+
+    button {
+        background-color: globals.$brightRed;
+        border: none;
+        font-family: inherit;
+        color: globals.$veryPaleRed;
+        display: inline-block;
+        height: fit-content;
+        border-radius: 25px;
+        padding: 0.75rem 2rem;
+        box-shadow: 0px 2px 10px globals.$brightRed;
+        font-weight: 500;
+    }
+}
