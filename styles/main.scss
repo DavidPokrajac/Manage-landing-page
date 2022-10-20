@@ -1,8 +1,10 @@
 @use "globals";
 
 main {
-    padding: 5rem;
+    padding: 5rem 8rem;
+
     section {
+       
         &:first-of-type {
             display: flex;
             
@@ -39,6 +41,106 @@ main {
                 }
             }
         }
+
+        &:nth-of-type(2) {
+            display: flex;
+            justify-content: space-between;
+
+            > article {
+                flex-basis: 50%;
+                color: globals.$darkGrayishBlue;
+                line-height: 2rem;
+                width: 65%;
+
+                h2 {
+                    color: globals.$darkBlue;
+                    font-size: 32px;
+                    line-height: 2.5rem;
+                    margin-top: 13px;
+                    width: 80%;
+                }
+
+                p {
+                    display: inline-block;
+                    width: 80%;
+                }
+
+            }
+            
+            > section {
+                display: flex;
+                flex-direction: column;
+                flex-basis: 50%;
+
+                > article {
+                    color: globals.$darkGrayishBlue;
+                    line-height: 2rem;
+                    position: relative;
+                    padding-left: 5rem;
+
+                    span {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        background-color: globals.$brightRed;
+                        color: globals.$veryLightGray;
+                        padding: 0 1.25rem;
+                        border-radius: 15px;
+                        font-weight: 500;
+                        font-size: 14px;
+                    }
+
+                    h3 {
+                        color: globals.$darkBlue;
+                        margin-top: 0;
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+section.slider-section {
+    display: flex;
+    flex-direction: column;
+
+    h2 {
+        text-align: center;
+        color: globals.$darkBlue;
+        margin: 3rem;
+    }
+
+    div.slider {
+        display: flex;
+        width: 120%;
+
+        > div {
+            background-color: globals.$veryLightGray;
+            color: globals.$darkGrayishBlue;
+            width: 40%;
+            margin: 0 1rem;
+            line-height: 1.65rem;
+            text-align: center;
+
+            h4 {
+                color: globals.$darkBlue;
+                text-align: center;
+                margin: 2rem 0;
+            }
+        }
+    }
+
+    button {
+        width: fit-content;
+        align-self: center;
+        background-color: globals.$brightRed;
+        color: globals.$veryLightGray;
+        font-family: globals.$fontFamily;
+        border: none;
+        padding: 1rem 2rem;
+        border-radius: 25px;
+        margin: 3rem 0 5rem 0;
     }
 }
 
