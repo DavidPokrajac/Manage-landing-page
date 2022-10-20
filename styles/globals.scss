@@ -23,4 +23,5 @@ body {
     font-family: $fontFamily;
     display: flex;
     flex-direction: column;
+    overflow-x: hidden;
 }
