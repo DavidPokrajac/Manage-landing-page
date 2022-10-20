@@ -10,11 +10,16 @@ body {
   font-family: "Be Vietnam Pro", sans-serif;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
+  width: 100vw;
 }
 
 header {
   display: flex;
-  padding: 2rem 3rem;
+  padding: 2rem 8rem;
+}
+header figure {
+  margin-left: 0;
 }
 header nav {
   flex-grow: 1;
