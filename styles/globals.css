@@ -10,4 +10,5 @@ body {
   font-family: "Be Vietnam Pro", sans-serif;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
 }/*# sourceMappingURL=globals.css.map */

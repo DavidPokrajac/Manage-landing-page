@@ -41,3 +41,62 @@ main {
         }
     }
 }
+
+aside {
+    &.promo-banner {
+        background-color: globals.$brightRed;
+        color: globals.$veryLightGray;
+        padding: 3rem 5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+
+        &::before {
+            content: "";
+            display: inline-block;
+            width: 50%;
+            height: 100%;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            background-image: url('../images/bg-tablet-pattern.svg');
+            background-repeat: no-repeat;
+            background-position: top;
+            background-size: 85%;
+            filter: opacity(10%);
+        }
+
+        &::after {
+            content: "";
+            display: inline-block;
+            width: 20%;
+            height: 50%;
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            background-image: url('../images/bg-tablet-pattern.svg');
+            background-repeat: no-repeat;
+            background-position: bottom;
+            background-size: 85%;
+            filter: opacity(10%);
+        }
+
+        h2 {
+            font-size: 38px;
+            flex-basis: 40%;
+           
+        }
+
+        button {
+            font-family: globals.$fontFamily;
+            color: globals.$brightRed;
+            background-color: globals.$veryLightGray;
+            border: none;
+            border-radius: 25px;
+            padding: 0.8rem 2rem;
+            font-weight: 500;
+            font-size: 13px;
+        }
+    }
+}
