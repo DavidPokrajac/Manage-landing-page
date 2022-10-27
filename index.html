@@ -13,6 +13,8 @@
   <link href="./styles/main.css" rel="stylesheet" type="text/css" />
   <link href="./styles/footer.css" rel="stylesheet" type="text/css" />
 
+  <script src="script.js" type="text/javascript" defer></script>
+
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
@@ -66,8 +68,7 @@
       </article>
       <section>
         <article>
-          <span>01</span>
-          <h3>Track company-wide progress</h3>
+          <h3><span>01</span>Track company-wide progress</h3>
           <p>
             See how your day-to-day tasks fit into the wider vision. Go from 
             tracking progress at the milestone level all the way done to the 
@@ -75,8 +76,7 @@
           </p>
         </article>
         <article>
-          <span>02</span>
-          <h3>Advanced built-in reports</h3>
+          <h3><span>02</span>Advanced built-in reports</h3>
           <p>
             Set internal delivery estimates and track progress toward company 
             goals. Our customisable dashboard helps you build out the reports 
@@ -84,8 +84,7 @@
           </p>
         </article>
         <article>
-          <span>03</span>
-          <h3>Everything you need in one place</h3>
+          <h3><span>03</span>Everything you need in one place</h3>
           <p>
             Stop jumping from one service to another to communicate, store files, 
             track tasks and share documents. Manage offers an all-in-one team 
@@ -101,6 +100,7 @@
     <div class="slider">
     <div>
       <h4>Anisha Li</h4>
+      <img src="./images/avatar-anisha.png" width="75" height="75" alt="Anisha Li's mugshot" />
       <blockquote>
         “Manage has supercharged our team’s workflow. The ability to maintain 
         visibility on larger milestones at all times keeps everyone motivated.”
@@ -108,6 +108,7 @@
     </div>
     <div>
       <h4>Ali Bravo</h4>
+      <img src="./images/avatar-ali.png" width="75" height="75" alt="Ali Bravo's mugshot" />
       <blockquote>
         “We have been able to cancel so many other subscriptions since using 
         Manage. There is no more cross-channel confusion and everyone is much 
@@ -116,6 +117,7 @@
     </div>
     <div>
       <h4>Richard Watts</h4>
+      <img src="./images/avatar-richard.png" width="75" height="75" alt="Richard Watts's mugshot" />
       <blockquote>
         “Manage allows us to provide structure and process. It keeps us organized 
         and focused. I can’t stop recommending them to everyone I talk to!”
@@ -123,6 +125,7 @@
     </div>
     <div>
       <h4>Shanai Gough</h4>
+      <img src="./images/avatar-shanai.png" width="75" height="75" alt="Shanai Gough's mugshot" />
       <blockquote>
         “Their software allows us to track, manage and collaborate on our projects 
         from anywhere. It keeps the whole team in-sync without being intrusive.”
@@ -138,9 +141,18 @@
   </aside>
 
   <footer>
-    <figure>
-      <img src="./images/logo.svg" alt="Manage Logo" />
-    </figure>
+    <div>
+      <figure>
+        <img src="./images/logo.svg" alt="Manage Logo" />
+      </figure>
+      <figure>
+        <span><img src="./images/icon-facebook.svg" /></span>
+        <span><img src="./images/icon-youtube.svg" /></span>
+        <span><img src="./images/icon-twitter.svg" /></span>
+        <span><img src="./images/icon-pinterest.svg" /></span>
+        <span><img src="./images/icon-instagram.svg" /></span>
+      </figure>
+    </div>
     <nav>
       <ul>
         <li>Home</li>
@@ -154,15 +166,15 @@
       </ul>
     </nav>
     <section>
-      <input type="text" placeholder="Updates in your inbox…" />
       <button>Go</button>
+      <input type="text" placeholder="Updates in your inbox…" />
       <p>Copyright 2020. All Rights Reserved</p>
     </section>
   </footer>
-  
+
   <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>. -->
-  </div>
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
 </body>
 </html>

@@ -5,31 +5,72 @@ footer {
     background: globals.$darkBlue;
     padding: 3rem 5rem;
 
-    figure {
-        img {
-            filter: invert(90%) sepia(100%) saturate(37%) hue-rotate(199deg) brightness(108%) contrast(99%);
+    div {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    
+        figure {
+            img {
+                filter: invert(90%) sepia(100%) saturate(37%) hue-rotate(199deg) brightness(108%) contrast(99%);
+            }
+
+            &:nth-of-type(2) {
+                display: flex;
+                justify-content: space-evenly;
+
+                span {
+                    filter: invert(90%) sepia(100%) saturate(37%) hue-rotate(199deg) brightness(108%) contrast(99%);
+                    
+                    &:hover {
+                        filter: invert(41%) sepia(48%) saturate(951%) hue-rotate(328deg) brightness(106%) contrast(95%);
+                        cursor: pointer;
+                    }
+                }
+            }
         }
     }
 
     nav {
+        flex-grow: 1;
+
         ul {
             list-style-type: none;
             display: flex;
             flex-direction: column;
             margin: 0;
-            padding: 0;
+            padding: 0 0 0 3rem;
+            height: 200px;
+            flex-wrap: wrap;
 
             li {
                 color: globals.$veryLightGray;
                 display: inline-block;
                 margin-bottom: 1rem;
                 flex-wrap: wrap;
+
+                &:hover {
+                    color: globals.$brightRed;
+                    cursor: pointer;
+                }
             }
         }
     }
 
     section {
+        position: relative;
+        flex-basis: 25%;
+
+        .email-error-warning {
+            color: globals.$brightRed;
+            position: absolute;
+            top: 50px;
+            left: 80px;
+            font-size: 12px;
+        }
+        
         input {
+            float: right;
             font-family: globals.$fontFamily;
             border-radius: 25px;
             padding: 0.75rem 1rem;
@@ -38,20 +79,104 @@ footer {
             &::placeholder {
                color: globals.$darkGrayishBlue; 
             }
+
+            &:focus {
+                outline: none;
+            }
         }
+        
         button {
+            float: right;
             background-color: globals.$brightRed;
             border: none;
             font-family: inherit;
             color: globals.$veryPaleRed;
-            display: inline-block;
+            margin-left: 1rem;
             height: fit-content;
             border-radius: 25px;
             padding: 0.75rem 1rem;
             font-weight: 500;
+
+            &:hover {
+                background-color: globals.$veryPaleRed;
+                opacity: 0.95;
+                color: white;
+                cursor: pointer;
+            }
         }
+
         p {
             color: globals.$darkGrayishBlue;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            text-align: right;
+        }
+    }
+}
+
+@media (max-width: globals.$mobileBreakPoint) {
+    footer {
+        flex-direction: column-reverse;
+        padding: 3rem 1rem;
+        position: relative;
+
+        div {
+            flex-direction: column-reverse;
+
+            figure {
+                &:first-of-type {
+                    margin: 2rem auto;
+                }
+
+                &:nth-of-type(2) {
+                    justify-content: space-around;
+                    margin: 0 0 1rem 0;
+                    img {
+                        transform: scale(1.75);
+                    }
+                }
+                
+                margin: 0;
+            }
+        }
+
+        section {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            position: initial;
+
+            input {
+                flex-basis: 75%;
+            }
+
+            button {
+                flex-basis: 21%;
+                margin: 0;
+            }
+
+            p {
+                position: absolute;
+                font-size: 12px;
+                top: calc(100% - 64px);
+                right: -10%;
+                transform: translateX(-50%);
+            }
+        }
+
+        nav {
+            padding: 3rem 1.5rem;
+
+            ul {
+                height: 145px;
+                padding: 0;
+                align-content: space-between;
+
+                li {
+                    font-size: 14px;
+                }
+            }
         }
     }
 }

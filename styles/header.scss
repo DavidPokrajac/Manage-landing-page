@@ -21,6 +21,11 @@ header {
                 color: globals.$darkBlue;
                 margin: 0 1rem;
                 font-size: 14px;
+
+                &:hover {
+                    color: globals.$darkGrayishBlue;
+                    cursor: pointer
+                }
             }
         }
     }
@@ -36,5 +41,16 @@ header {
         padding: 0.75rem 2rem;
         box-shadow: 0px 2px 10px globals.$brightRed;
         font-weight: 500;
+
+        &:hover {
+            opacity: 0.75;
+            cursor: pointer;
+        }
+    }
+}
+
+@media (max-width: globals.$mobileBreakPoint) {
+    header {
+        padding: 2rem 1rem;
     }
 }
