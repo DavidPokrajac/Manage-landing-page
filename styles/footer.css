@@ -10,6 +10,38 @@ body {
   font-family: "Be Vietnam Pro", sans-serif;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
+  width: 100vw;
+}
+
+body::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: -100px;
+  right: -25px;
+  width: 50%;
+  height: 100vh;
+  background-image: url("../images/bg-tablet-pattern.svg");
+  background-repeat: no-repeat;
+  background-size: 85% 85%;
+  background-position: top right;
+  z-index: -1;
+}
+
+body::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 1100px;
+  left: -30%;
+  width: 50%;
+  height: 100%;
+  background-image: url("../images/bg-tablet-pattern.svg");
+  background-repeat: no-repeat;
+  background-size: 85% 85%;
+  background-position: center center;
+  z-index: -1;
 }
 
 footer {
@@ -17,15 +49,36 @@ footer {
   background: hsl(228deg, 39%, 23%);
   padding: 3rem 5rem;
 }
-footer figure img {
+footer div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+footer div figure img {
   filter: invert(90%) sepia(100%) saturate(37%) hue-rotate(199deg) brightness(108%) contrast(99%);
+}
+footer div figure:nth-of-type(2) {
+  display: flex;
+  justify-content: space-evenly;
+}
+footer div figure:nth-of-type(2) span {
+  filter: invert(90%) sepia(100%) saturate(37%) hue-rotate(199deg) brightness(108%) contrast(99%);
+}
+footer div figure:nth-of-type(2) span:hover {
+  filter: invert(41%) sepia(48%) saturate(951%) hue-rotate(328deg) brightness(106%) contrast(95%);
+  cursor: pointer;
+}
+footer nav {
+  flex-grow: 1;
 }
 footer nav ul {
   list-style-type: none;
   display: flex;
   flex-direction: column;
   margin: 0;
-  padding: 0;
+  padding: 0 0 0 3rem;
+  height: 200px;
+  flex-wrap: wrap;
 }
 footer nav ul li {
   color: hsl(0deg, 0%, 98%);
@@ -33,7 +86,23 @@ footer nav ul li {
   margin-bottom: 1rem;
   flex-wrap: wrap;
 }
+footer nav ul li:hover {
+  color: hsl(12deg, 88%, 59%);
+  cursor: pointer;
+}
+footer section {
+  position: relative;
+  flex-basis: 25%;
+}
+footer section .email-error-warning {
+  color: hsl(12deg, 88%, 59%);
+  position: absolute;
+  top: 50px;
+  left: 80px;
+  font-size: 12px;
+}
 footer section input {
+  float: right;
   font-family: "Be Vietnam Pro", sans-serif;
   border-radius: 25px;
   padding: 0.75rem 1rem;
@@ -48,12 +117,16 @@ footer section input:-ms-input-placeholder {
 footer section input::placeholder {
   color: hsl(227deg, 12%, 61%);
 }
+footer section input:focus {
+  outline: none;
+}
 footer section button {
+  float: right;
   background-color: hsl(12deg, 88%, 59%);
   border: none;
   font-family: inherit;
   color: hsl(13deg, 100%, 96%);
-  display: inline-block;
+  margin-left: 1rem;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
@@ -61,6 +134,71 @@ footer section button {
   padding: 0.75rem 1rem;
   font-weight: 500;
 }
+footer section button:hover {
+  background-color: hsl(13deg, 100%, 96%);
+  opacity: 0.95;
+  color: white;
+  cursor: pointer;
+}
 footer section p {
   color: hsl(227deg, 12%, 61%);
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  text-align: right;
+}
+
+@media (max-width: 375px) {
+  footer {
+    flex-direction: column-reverse;
+    padding: 3rem 1rem;
+    position: relative;
+  }
+  footer div {
+    flex-direction: column-reverse;
+  }
+  footer div figure {
+    margin: 0;
+  }
+  footer div figure:first-of-type {
+    margin: 2rem auto;
+  }
+  footer div figure:nth-of-type(2) {
+    justify-content: space-around;
+    margin: 0 0 1rem 0;
+  }
+  footer div figure:nth-of-type(2) img {
+    transform: scale(1.75);
+  }
+  footer section {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    position: initial;
+  }
+  footer section input {
+    flex-basis: 75%;
+  }
+  footer section button {
+    flex-basis: 21%;
+    margin: 0;
+  }
+  footer section p {
+    position: absolute;
+    font-size: 12px;
+    top: calc(100% - 64px);
+    right: -10%;
+    transform: translateX(-50%);
+  }
+  footer nav {
+    padding: 3rem 1.5rem;
+  }
+  footer nav ul {
+    height: 145px;
+    padding: 0;
+    align-content: space-between;
+  }
+  footer nav ul li {
+    font-size: 14px;
+  }
 }/*# sourceMappingURL=footer.css.map */
