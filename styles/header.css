@@ -44,12 +44,31 @@ body::after {
   z-index: -1;
 }
 
+@media (max-width: 375px) {
+  body::before {
+    width: 93%;
+    height: 67vh;
+    background-size: cover;
+    background-position: center left;
+  }
+  body::after {
+    top: 513px;
+    left: 65%;
+    width: 100%;
+    height: 60vh;
+    background-position: center center;
+  }
+}
 header {
   display: flex;
   padding: 2rem 8rem;
 }
 header figure {
   margin-left: 0;
+  margin-bottom: 0;
+}
+header figure img {
+  vertical-align: bottom;
 }
 header nav {
   flex-grow: 1;
@@ -68,6 +87,9 @@ header nav ul li {
 header nav ul li:hover {
   color: hsl(227deg, 12%, 61%);
   cursor: pointer;
+}
+header nav ul li:last-of-type {
+  margin-left: auto;
 }
 header button {
   background-color: hsl(12deg, 88%, 59%);
@@ -91,5 +113,12 @@ header button:hover {
 @media (max-width: 375px) {
   header {
     padding: 2rem 1rem;
+  }
+  header nav {
+    text-align: right;
+    padding: 0.625rem 0;
+  }
+  header nav img {
+    vertical-align: bottom;
   }
 }/*# sourceMappingURL=header.css.map */

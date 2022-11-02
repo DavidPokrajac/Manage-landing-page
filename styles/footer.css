@@ -44,6 +44,21 @@ body::after {
   z-index: -1;
 }
 
+@media (max-width: 375px) {
+  body::before {
+    width: 93%;
+    height: 67vh;
+    background-size: cover;
+    background-position: center left;
+  }
+  body::after {
+    top: 513px;
+    left: 65%;
+    width: 100%;
+    height: 60vh;
+    background-position: center center;
+  }
+}
 footer {
   display: flex;
   background: hsl(228deg, 39%, 23%);
@@ -146,6 +161,7 @@ footer section p {
   right: 0;
   bottom: 0;
   text-align: right;
+  font-size: 12px;
 }
 
 @media (max-width: 375px) {
@@ -185,10 +201,13 @@ footer section p {
   }
   footer section p {
     position: absolute;
-    font-size: 12px;
     top: calc(100% - 64px);
     right: -10%;
     transform: translateX(-50%);
+  }
+  footer section .email-error-warning {
+    left: 20px;
+    top: 95px;
   }
   footer nav {
     padding: 3rem 1.5rem;

@@ -6,6 +6,11 @@ header {
 
     figure {
         margin-left: 0;
+        margin-bottom: 0;
+        
+        img {
+            vertical-align: bottom;
+        }
     }
 
     nav {
@@ -25,6 +30,10 @@ header {
                 &:hover {
                     color: globals.$darkGrayishBlue;
                     cursor: pointer
+                }
+
+                &:last-of-type{
+                    margin-left: auto;
                 }
             }
         }
@@ -52,5 +61,14 @@ header {
 @media (max-width: globals.$mobileBreakPoint) {
     header {
         padding: 2rem 1rem;
+
+        nav {
+            text-align: right;
+            padding: 0.625rem 0;
+
+            img  {
+                vertical-align: bottom;
+            }
+        }
     }
 }
